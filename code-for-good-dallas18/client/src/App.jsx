@@ -34,11 +34,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">SER Houston - Online Application</h1>
         </header>
-        <Login />
-        <SerApplication />
 				<Router>
 					<div>
-						<Route exact path="/" component={App}/>
+						<Route exact path="/" component={Login}/>
 						<Route path="/login" component={Login}/>
 						<Route path="/app" component={SerApplication}/>
 					</div>
