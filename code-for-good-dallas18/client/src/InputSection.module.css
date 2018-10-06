@@ -1,4 +1,5 @@
-.inputFieldGroup {
-  
-
+.inputFieldSection {
+  position: relative;
+  display: block;
+  background-color: #008AB4;
 }
