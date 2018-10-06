@@ -28,14 +28,16 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="login">
-        <h1 className={styles.loginHeader}>Login</h1>
-        <span>Email</span>
-        <input type="email" name="Email" defaultValue=""/><br/>
-        <span>Password</span>
-        <input type="password" name="Password" defaultValue=""/><br/>
-        <button type="submit">Login</button>
-        <button onClick={() => this.nextPath('/signup')}>Signup</button>
+      <div className="parent">
+        <div className="login">
+          <h1 className={styles.loginHeader}>Login</h1>
+          <span>Email</span>
+          <input type="email" name="Email" defaultValue=""/><br/>
+          <span>Password</span>
+          <input type="password" name="Password" defaultValue=""/><br/>
+          <button type="submit">Login</button>
+          <button onClick={() => this.nextPath('/signup')}>Signup</button>
+        </div>
       </div>
     );
   }
