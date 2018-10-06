@@ -1,9 +1,15 @@
 .inputFieldGroup {
-  
-
+  padding: 1vh 1vw;
 }
 
 .inputQuestion {
   display: flex;
   color: #008AB4;
+  padding: 1vh 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .inputQuestion {
+    padding: 1vh 8vw;
+  }
 }

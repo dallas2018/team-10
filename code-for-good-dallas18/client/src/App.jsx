@@ -7,8 +7,10 @@ import SerApplication from './SerApplication.jsx';
 import Landing from './Landing.jsx';
 import Login from './Login.jsx';
 import Signup from './Signup.jsx';
+import Footer from './Footer.jsx';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import logo from './assets/logo.jpg';
 
 class App extends Component {
   state = {
@@ -34,9 +36,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">SER Houston</h1>
-          <h2 className="App-subtitle">Online Application</h2>
+        <header className="appHeader">
+          <div className="logoWrapper">
+            <img className="logo" href="https://serhouston.org" src={logo} alt="logo" />
+          </div>
+          <h1 className="App-title">SER Houston - Application</h1>
         </header>
         <div className="container">
           <Router>
@@ -47,6 +51,9 @@ class App extends Component {
               <Route path="/app" component={SerApplication}/>
             </div>
           </Router>
+        </div>
+        <div className="footer">
+          <Footer />
         </div>
       </div>
     );

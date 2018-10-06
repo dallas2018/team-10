@@ -3,17 +3,37 @@
   background-color: #3A99D8;
 }
 
-.App-header {
-  background-color: #008AB4;
-  min-height: 10vh;
+.appHeader {
+  background-color: #fff;
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1rem;
+  padding: 0 5vw;
+  color: #409AD6;
+}
+
+.logoWrapper {
+  width: 90%;
+}
+
+.logo {
+  float: left;
+  height: 10vh;
 }
 
 .container {
-  margin: 10vh 20vh;
+  padding: 10vh 30vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10vh 5vh;
+  }
+
+  .logo {
+    height: 5vh;
+  }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import InputField from './InputField.jsx';
 import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
-import DemographicInformation from './question-groups/DemographicInformation';
+import Footer from './Footer.jsx';
 import styles from './SerApplication.module.css';
 import firebase from './fire.js';
 
@@ -10,6 +10,7 @@ class SerApplication extends Component {
   constructor() {
     super();
     this.state = {
+      isSubmitted: false,
       firstName: '',
       lastName: ''
     }
@@ -46,9 +47,13 @@ class SerApplication extends Component {
   	  lastName: this.state.lastName
   	}
   	itemsRef.push(item);
+    this.setState({
+      isSubmitted: true
+    });
   }
 
   render() {
+    const isSubmitted = this.state.isSubmitted;
     return (
       <div className="App">
           <form onSubmit={this.handleSubmit}>
@@ -56,9 +61,16 @@ class SerApplication extends Component {
               <InputFieldGroup type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName}>First Name</InputFieldGroup>
               <InputFieldGroup type="text" name="lastName" onChange={this.handleChange} value={this.state.lastName}>Last Name</InputFieldGroup>
             </InputSection>
-            <button>Submit</button>
+            <InputSection name="Test Two">
+              <InputFieldGroup type="text" name="middleName" onChange={this.handleChange} value={this.state.firstName}>First Name</InputFieldGroup>
+              <InputFieldGroup type="text" name="idk" onChange={this.handleChange} value={this.state.lastName}>Last Name</InputFieldGroup>
+            </InputSection>
+            {isSubmitted ? 
+              <button className={styles.submittedButton}>Submitted! 🎉</button>
+              :
+              <button className={styles.submitButton}>Submit</button>
+            }
           </form>
-        <p className="App-intro">{this.state.response}</p>
       </div>
     );
   }
