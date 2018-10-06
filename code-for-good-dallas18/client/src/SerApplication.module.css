@@ -17,5 +17,14 @@
 .nameBlock {
   display: flex;
   flex-direction: row;
+}
 
+.phoneBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.subSocial {
+  display: flex;
+  flex-direction: row;
 }
