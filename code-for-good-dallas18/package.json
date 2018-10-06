@@ -4,10 +4,12 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "express": "^4.16.2",
+    "firebase": "^5.5.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "^2.0.4"

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InputField from './InputField.jsx';
+import fire from './fire';
 
 import './App.css';
 
