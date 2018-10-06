@@ -635,6 +635,73 @@
       "var_name": "emergency_contact_address"
     }
   ],
+  "Educaton History": [
+    {
+      "question": "What is the highest level of education that you have reached or are pursuing?",
+      "answer": [
+        "Please select...",
+        "High School graduate",
+        "GED",
+        "Some college",
+        "Associate's degree",
+        "Bachelor's degree",
+        "Master's degree",
+        "Doctoral or Professional degree",
+      ],
+      "type": "dropdown",
+      "var_name": "education_level"
+    },
+    {
+      "question": "Are you currently attending school?",
+      "answer": [
+        "Please select...",
+        "Yes",
+        "No"
+      ],
+      "type": "dropdown",
+      "var_name": "education_attending"
+    },
+    {
+      "question": "If you answered yes in the previous question, what school are you attending?",
+      "answer": [],
+      "type": "text",
+      "var_name": "school_attending"
+    },
+    {
+      "question": "What's your major field of study?",
+      "answer": [],
+      "type": "text",
+      "var_name": "field_of_study"
+    },
+    {
+      "question": "How would you rate your computer skills?",
+      "answer": [
+        "Please select...",
+        "Below Average",
+        "Average",
+        "Above Average"
+      ],
+      "type": "dropdown",
+      "var_name": "computer_skills"
+    },
+    {
+      "question": "What is your English literacy level? (Ability to read/comprehend)?",
+      "answer": [
+        "Please select...",
+        "Below Average",
+        "Average",
+        "Above Average"
+      ],
+      "type": "dropdown",
+      "var_name": "computer_skills"
+    },
+    {
+      "question": "Please list any certificates you have earned, or any relevant training experience:",
+      "answer": [],
+      "type": "text",
+      "var_name": "add_experience"
+    },
+  ]
   "Military Status": [
     {
       "question": "Military Status",
