@@ -1,0 +1,27 @@
+.footer {
+  background-color: #4d5153;
+  grid-area: footer;
+  margin-bottom: -3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__text {
+  color: #fff;
+  margin-left: 0.05rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2vh;
+}
+
+.footer__heart {
+  font-size: 100%;
+  color: #F00;
+}
+
+.footer__copyright {
+  text-align: center;
+}

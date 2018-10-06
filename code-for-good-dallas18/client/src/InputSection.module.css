@@ -1,9 +1,8 @@
 .inputSection {
-  position: relative;
-  display: block;
   background-color: #fff;
   border-radius: 50px;
   padding: 8vh 5vw;
+  margin: 5vh 0;
 }
 
 .inputSectionHeader {

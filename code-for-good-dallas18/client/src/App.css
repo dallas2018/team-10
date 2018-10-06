@@ -10,7 +10,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 1vmin);
+  font-size: 1rem;
+  padding: 0 5vw;
   color: #409AD6;
 }
 
@@ -19,17 +20,20 @@
 }
 
 .logo {
-  margin-left: 20px;
   float: left;
   height: 10vh;
 }
 
 .container {
-  margin: 10vh 30vh 0 30vh;
+  padding: 10vh 30vh;
 }
 
 @media only screen and (max-width: 600px) {
   .container {
-    margin: 10vh 5vh;
+    padding: 10vh 5vh;
+  }
+
+  .logo {
+    height: 5vh;
   }
 }
