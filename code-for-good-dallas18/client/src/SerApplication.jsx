@@ -39,6 +39,7 @@ class SerApplication extends Component {
       race: '',
       languages: '',
       special_accomodations: '',
+      //work_authorization: '',
       citizenship: '',
       valid_id: '',
       form_id: '',
@@ -46,7 +47,6 @@ class SerApplication extends Component {
       transportation: '',
       housing_status: '',
       risk_homeless: '',
-      over_24: '',
       foster_care: '',
       parents_incarcerated: '',
       juvie: '',
@@ -72,11 +72,16 @@ class SerApplication extends Component {
       emergency_contact_mobile_phone: '',
       emergency_contact_alternate_phone: '',
       emergency_contact_address: '',
-      veteran: '',
+      //education_level:'',
+      //education_attending:'',
+      //school_attending:'',
+      //field_of_study:'',
+      //computer_skills:'',
+      //literacy:'',
+      //add_experience:'',
       military_status: '',
       date_discharge: '',
       branch_served: '',
-      rate_below: '',
       high_priority: '',
       medium_priority: '',
       low_priority: '',
@@ -87,7 +92,7 @@ class SerApplication extends Component {
       expected_wage: '',
       drug_screening: '',
       share_SER: '',
-      other: ''    
+      other: ''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -107,7 +112,7 @@ class SerApplication extends Component {
 
     return body;
   };
-  
+
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
@@ -340,7 +345,7 @@ class SerApplication extends Component {
               <InputFieldGroup type="text" name="other" onChange={this.handleChange} value={this.state.other}>Is there anything else you think we should know?</InputFieldGroup>
             </InputSection>
 
-            {isSubmitted ? 
+            {isSubmitted ?
               <button className={styles.submittedButton}>Submitted! 🎉</button>
               :
               <button className={styles.submitButton}>Submit</button>
@@ -352,4 +357,3 @@ class SerApplication extends Component {
 }
 
 export default SerApplication;
-
