@@ -7,7 +7,6 @@ import json
 base_url = 'https://www.tfaforms.com/429640'
 
 upper_dct = {}
-dct = {}
 temp_question = ''
 temp_choice = []
 
@@ -15,15 +14,22 @@ opener = build_opener()
 page = opener.open(base_url)
 soup = bf(page, 'lxml')
 for i in (soup.findAll('fieldset', {'class': 'section column'})):
+    dct = {}
     title = i.select('legend')[0].text
     print("section title: ", i.select('legend')[0].text)
     print('--------------------------------------')
     # getting options
     # sub-categories
-    #print(i.prettify())
+    # print(i.prettify())
     if i.fieldset:
         print('sub section title: ', i.fieldset.legend)
+    public_assist = i.findAll('div', {'class': 'htmlContent'})
+    if public_assist != []:
+        temp_question = public_assist[0].text
+        dct[temp_question] = []
+    print("finding question: ", i.findAll('div', {'class':'htmlContent'}))
     for j in (i.findAll('label', {'class': 'label'})):
+        print(j)
         if not j.span:
             print("question: ", j.text)
             temp_question = j.text
@@ -42,6 +48,7 @@ for i in (soup.findAll('fieldset', {'class': 'section column'})):
     upper_dct[title] = dct
 
 type = 'dropdown'
+print(json.dumps(upper_dct, indent=2))
 master_dct = {}
 for title, questions in upper_dct.items():
     master_dct[title] = []
@@ -53,7 +60,7 @@ for title, questions in upper_dct.items():
         if 'Yes' in answer:
             type = 'checkbox'
         master_dct[title].append({'question': question, 'answer': answer,
-            'type': type}) 
+            'type': type, 'var_name': 'hello'}) 
 
 with open('question.json', 'w') as f:
     json.dump(master_dct, f, indent=2)
