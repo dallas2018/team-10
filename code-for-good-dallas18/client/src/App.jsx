@@ -3,6 +3,8 @@ import InputField from './InputField.jsx';
 import fire, {db} from './fire';
 import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
+import SerApplication from './SerApplication.jsx';
+import Login from './Login.jsx';
 import './App.css';
 
 class App extends Component {
@@ -31,12 +33,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">SER Houston - Online Application</h1>
-
-          <InputSection type="text" required="false">Hello</InputSection>
         </header>
-        
-
-        <p className="App-intro">{this.state.response}</p>
+        <Login />
+        <SerApplication />
       </div>
     );
   }
