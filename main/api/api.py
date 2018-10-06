@@ -1,16 +1,7 @@
-# pandas
-import pandas as pd
-
 # flask files
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
-
-# local files
-from scraper import web_scraper
-from get_data import get_processed_data
-import json
-import constants
 
 app = Flask(__name__)
 api = Api(app)
