@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import fire from './fire.js';
-import styles from './Login.module.css';
+import styles from './Signup.module.css';
 
 class Login extends Component {
   state = {
@@ -28,15 +28,21 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="parent">
-        <div className="login">
-          <h1 className={styles.loginHeader}>Login</h1>
-          <span>Email</span>
-          <input type="email" name="Email" defaultValue=""/><br/>
-          <span>Password</span>
-          <input type="password" name="Password" defaultValue=""/><br/>
-          <button type="submit">Login</button>
-          <button onClick={() => this.nextPath('/signup')}>Signup</button>
+      <div className={styles.login}>
+        <h1 className={styles.signupHeader}>Login</h1>
+        <div className={styles.questionWrapper}>
+          <div className={styles.qBlock}>
+            <span className={styles.inputQuestion}>Email</span>
+            <input className={styles.input} type="email" name="Email" defaultValue=""/><br/>
+          </div>
+          <br/>
+          <div className={styles.qBlock}>
+            <span className={styles.inputQuestion}>Password</span>
+            <input className={styles.input} type="password" name="Password" defaultValue=""/><br/>
+          </div>
+          <div className={styles.buttonWrapper}>
+            <button type="submit">Login</button>
+          </div>
         </div>
       </div>
     );
