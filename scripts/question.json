@@ -605,7 +605,7 @@
   ],
   "Emergency Contact Information": [
     {
-      "question": "Emergency Contact Name",
+      "question": "Emergency Contact Full Name",
       "answer": [],
       "type": "text",
       "var_name": "emergency_contact_name"
