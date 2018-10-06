@@ -1,3 +1,16 @@
-.serApplication {
+.submitButton {
+  border: solid 3px #fff;
+  border-radius: 15px;
+  padding: 1vh 5vw;
+  font-size: 1.5rem;
+}
+
+.submittedButton {
+  border: solid 3px #28bb63;
+  background-color: #28bb63;
+  border-radius: 15px;
+  padding: 1vh 5vw;
+  font-size: 1.5rem;
+  color: #fff;
 
 }

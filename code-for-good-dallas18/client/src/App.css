@@ -25,11 +25,11 @@
 }
 
 .container {
-  margin: 10vh 30vh 0 30vh;
+  padding: 10vh 30vh;
 }
 
 @media only screen and (max-width: 600px) {
   .container {
-    margin: 10vh 5vh;
+    padding: 10vh 5vh;
   }
 }

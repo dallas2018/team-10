@@ -7,6 +7,7 @@ import SerApplication from './SerApplication.jsx';
 import Landing from './Landing.jsx';
 import Login from './Login.jsx';
 import Signup from './Signup.jsx';
+import Footer from './Footer.jsx';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.jpg';
@@ -50,6 +51,9 @@ class App extends Component {
               <Route path="/app" component={SerApplication}/>
             </div>
           </Router>
+        </div>
+        <div className="footer">
+          <Footer />
         </div>
       </div>
     );
