@@ -8,11 +8,12 @@ const InputFieldGroup = ({
   value,
   type,
   name,
+  onChange,
   required
 }) => (
     <div className={styles.inputFieldGroup}>
       <p className={styles.inputQuestion}>{children}</p>
-      <InputField value={value} type={type} name={name} required={required} />
+      <InputField value={value} type={type} name={name} onChange={onChange} required={required} />
     </div>
 );
 
@@ -24,6 +25,7 @@ InputFieldGroup.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string.isRequired,
   name: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
   required: PropTypes.bool.isRequired
 };
 

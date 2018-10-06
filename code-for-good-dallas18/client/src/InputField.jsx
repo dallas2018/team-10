@@ -6,10 +6,11 @@ const InputField = ({
   value,
   type,
   name,
-  required
+  required,
+  onChange
 }) => (
     <div className={styles.inputField}>
-      <input value={value} type={type} name={name} required={required} />
+      <input value={value} type={type} name={name} onChange={onChange} required={required} />
     </div>
 );
 
@@ -17,7 +18,8 @@ InputField.propTypes = {
   value: PropTypes.string,
   type: PropTypes.string.isRequired,
   name: PropTypes.string,
-  required: PropTypes.bool.isRequired
+  required: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default InputField;

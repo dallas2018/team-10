@@ -60,11 +60,9 @@ class SerApplication extends Component {
     return (
       <div className="App">
         <form onSubmit={this.handleSubmit}>
-          <span>First Name</span>
-          <input type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName}/>
+          <InputFieldGroup type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName}>First Name</InputFieldGroup>
           <br/>
-          <span>Last Name</span>
-          <input type="text" name="lastName" onChange={this.handleChange} value={this.state.lastName}/>
+          <InputFieldGroup type="text" name="lastName" onChange={this.handleChange} value={this.state.lastName}>Last Name</InputFieldGroup>
           <br/>
           <button>Submit</button>
         </form>
