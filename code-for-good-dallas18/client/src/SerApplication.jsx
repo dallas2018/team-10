@@ -8,6 +8,7 @@ import Footer from './Footer.jsx';
 import styles from './SerApplication.module.css';
 import { BrowserRouter, Link, Redirect } from 'react-router-dom'
 import firebase from './fire.js';
+import recognition, { DOMloaded } from './script.js';
 import logo from './assets/logo.jpg';
 
 class SerApplication extends Component {
@@ -199,6 +200,10 @@ class SerApplication extends Component {
 		}.bind(this), 3000);
   }
 
+  recognition() {
+    recognition.recognition();
+  }
+
   render() {
     const isSubmitted = this.state.isSubmitted;
     const hear_ser_jobs_from_arr = ["Please select...", "Church Flyer", "Church Presentation", "Community Agency Flyer", "Community Agency Staff", "Guidance Counselor", "HCC", "Information Session", "Internet/ Social Media", "Job Fair/ Hiring Event", "SER Client/Alumni", "SER Staff", "United Way Helpline", "Workforce Solutions", "Other"];
@@ -339,7 +344,9 @@ class SerApplication extends Component {
               <InputFieldGroup type="text" name="expected_wage" onChange={this.handleChange} value={this.state.expected_wage}>What is your wage expectation?</InputFieldGroup>
               <InputDropdownGroup options={drug_screening_arr}>Are you able to take and pass a drug screening within 24 hours?</InputDropdownGroup>
               <InputDropdownGroup options={share_SER_arr}>Are you interested in sharing your SER story after receiving SER services?</InputDropdownGroup>
-              <InputFieldGroup type="text" name="other" onChange={this.handleChange} value={this.state.other}>Is there anything else you think we should know?</InputFieldGroup>
+              <Dropdown options={share_SER_arr}/>
+              <InputFieldGroup id="phraseDiv" type="text" name="other" onChange={this.handleChange} value={this.state.other}>Is there anything else you think we should know?</InputFieldGroup>
+              <button id="startRecognizeOnceAsyncButton" onClick={() => recognition()}>Start recognition</button>
             </InputSection>
 
             {isSubmitted ?
