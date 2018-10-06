@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fire from './fire';
+import fire from './fire.js';
 import styles from './Login.module.css';
 
 class Login extends Component {
