@@ -225,7 +225,7 @@
         "Please select...",
         "Female",
         "Male",
-        "Transgender"
+        "Other"
       ],
       "type": "dropdown",
       "var_name": "gender"
