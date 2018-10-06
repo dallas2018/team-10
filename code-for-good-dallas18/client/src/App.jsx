@@ -40,7 +40,7 @@ class App extends Component {
 					<div>
 						<Route exact path="/" component={App}/>
 						<Route path="/login" component={Login}/>
-						<Route path="/app" component={App}/>
+						<Route path="/app" component={SerApplication}/>
 					</div>
 				</Router>
       </div>
