@@ -258,7 +258,6 @@
     {
       "question": "Do you speak any languages other than English?",
       "answer": [
-        "African Languages",
         "Arabic",
         "Chinese",
         "French",
@@ -278,20 +277,27 @@
       "var_name": "languages"
     },
     {
-      "question": "Do you need any special accommodations in order to participate in training or performing tasks at work?",
+      "question": "Do you require any special accommodations?",
       "answer": [
-        "Visual",
         "Hearing",
-        "Speech",
         "Limited Mobility",
-        "Not Applicable",
-        "Are you authorized to work in the United States?",
-        "Please select...",
-        "Yes",
-        "No"
+        "Speech",
+        "Visual",
+        "Other",
+        "Not Applicable"
       ],
       "type": "checkbox",
       "var_name": "special_accomodations"
+    },
+    {
+      "question": "Are you authorized to work in the United States?",
+      "answer": [
+        "Please select...",
+        "Yes",
+        "No",
+      ],
+      "type": "dropdown",
+      "var_name": "work_authorization"
     },
     {
       "question": "I attest, under penalty of perjury, that I am a (choose one of the following):",
@@ -319,10 +325,11 @@
       "answer": [
         "Please select...",
         "Texas Issued Driver's License",
-        "Other State Issued Driver's License",
         "Texas Issued Identification Card",
+        "Other State Issued Driver's License",
         "Other State Issued Identification Card",
-        "Passport"
+        "Passport",
+        "Visa (Any)"
       ],
       "type": "dropdown",
       "var_name": "form_id"
@@ -334,7 +341,8 @@
         "Class A",
         "Class B",
         "Class C",
-        "Class M"
+        "Class M",
+        "I don't have a Driver's License"
       ],
       "type": "dropdown",
       "var_name": "license_type"
@@ -374,16 +382,6 @@
       ],
       "type": "checkbox",
       "var_name": "risk_homeless"
-    },
-    {
-      "question": "Are you over 24?",
-      "answer": [
-        "Please select...",
-        "Yes",
-        "No"
-      ],
-      "type": "checkbox",
-      "var_name": "over_24"
     },
     {
       "question": "Are you currently in foster care?",
@@ -449,7 +447,7 @@
       "var_name": "drop_high_school"
     },
     {
-      "question": "Are you parenting?",
+      "question": "Do you have any children?",
       "answer": [
         "Please select...",
         "Yes",
@@ -460,7 +458,7 @@
       "var_name": "parenting"
     },
     {
-      "question": "Expected Due Date",
+      "question": "If you picked 'Expecting' in the previous question, please enter the expected due date (MM/DD/YYYY)",
       "answer": [],
       "type": "text",
       "var_name": "expected_due_date"
@@ -485,7 +483,7 @@
         "Married",
         "Divorced",
         "Separated",
-        "Widow/Widower"
+        "Widowed"
       ],
       "type": "dropdown",
       "var_name": "marital_status"
@@ -515,13 +513,13 @@
       "var_name": "annual_income"
     },
     {
-      "question": "How many children 17 years old and under live in your household?",
+      "question": "How many children (17 years old and under) live in your household?",
       "answer": [],
       "type": "text",
       "var_name": "children_under_17"
     },
     {
-      "question": "How many young adults 18-24 years old live in your household?",
+      "question": "How many young adults (18-24 years old) live in your household?",
       "answer": [],
       "type": "text",
       "var_name": "adult_18_24"
@@ -533,7 +531,7 @@
       "var_name": "adult_over_25"
     },
     {
-      "question": "Do you have a checking?",
+      "question": "Do you have a checking account?",
       "answer": [
         "Please select...",
         "Yes",
@@ -593,7 +591,7 @@
       "var_name": "public_assistance"
     },
     {
-      "question": "Are you registered with a selective service?",
+      "question": "Are you registered for selective service?",
       "answer": [
         "Please select...",
         "Yes",
@@ -607,7 +605,7 @@
   ],
   "Emergency Contact Information": [
     {
-      "question": "Emergency Contact Name",
+      "question": "Emergency Contact Full Name",
       "answer": [],
       "type": "text",
       "var_name": "emergency_contact_name"
