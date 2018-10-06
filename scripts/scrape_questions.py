@@ -56,4 +56,4 @@ for title, questions in upper_dct.items():
             'type': type}) 
 
 with open('question.json', 'w') as f:
-    json.dump(master_dct, f)
+    json.dump(master_dct, f, indent=2)
