@@ -11,6 +11,7 @@ class App extends Component {
   };
 
   componentDidMount() {
+    fire.database().ref("Applicant").set({question: 'name', answer: 'jmo', bob: 'bob', shui: 'shui'});
     this.callApi()
       .then(res => this.setState({ response: res.express }))
       .catch(err => console.log(err));
