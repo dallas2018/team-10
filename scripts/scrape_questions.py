@@ -2,6 +2,7 @@ import urllib.request
 import re
 from bs4 import BeautifulSoup as bf
 from urllib.request import Request, urlopen, build_opener
+import json
 
 base_url = 'https://www.tfaforms.com/429640'
 
@@ -54,4 +55,5 @@ for title, questions in upper_dct.items():
         master_dct[title].append({'question': question, 'answer': answer,
             'type': type}) 
 
-print(master_dct)
+with open('question.json', 'w') as f:
+    json.dump(master_dct, f)
