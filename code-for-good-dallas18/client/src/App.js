@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import InputField from './InputField.jsx';
 import fire from './fire';
-
+import InputFieldGroup from './InputFieldGroup.jsx';
+import InputSection from './InputSection.jsx';
 import './App.css';
 
 class App extends Component {
@@ -30,7 +31,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">SER Houston - Online Application</h1>
 
-          <InputField type="text" required="false" />
+          <InputSection type="text" required="false">Hello</InputSection>
         </header>
         
 
