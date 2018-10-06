@@ -258,7 +258,6 @@
     {
       "question": "Do you speak any languages other than English?",
       "answer": [
-        "African Languages",
         "Arabic",
         "Chinese",
         "French",
@@ -278,20 +277,27 @@
       "var_name": "languages"
     },
     {
-      "question": "Do you need any special accommodations in order to participate in training or performing tasks at work?",
+      "question": "Do you require any special accommodations?",
       "answer": [
         "Visual",
         "Hearing",
         "Speech",
         "Limited Mobility",
-        "Not Applicable",
-        "Are you authorized to work in the United States?",
-        "Please select...",
-        "Yes",
-        "No"
+        "Other",
+        "Not Applicable"
       ],
       "type": "checkbox",
       "var_name": "special_accomodations"
+    },
+    {
+      "question": "Are you authorized to work in the United States?",
+      "answer": [
+        "Please select...",
+        "Yes",
+        "No",
+      ],
+      "type": "dropdown",
+      "var_name": "work_authorization"
     },
     {
       "question": "I attest, under penalty of perjury, that I am a (choose one of the following):",
