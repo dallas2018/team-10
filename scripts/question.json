@@ -337,7 +337,7 @@
         "Class M"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "license_type"
     },
     {
       "question": "What is your primary method of transportation?",
@@ -349,7 +349,7 @@
         "Own/lease vehicle but it's inoperable/not reliable"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "transportation"
     },
     {
       "question": "What is your housing status?",
@@ -363,7 +363,7 @@
         "Homeless"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "housing_status"
     },
     {
       "question": "Are you at risk of becoming homeless?",
@@ -373,7 +373,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "risk_homeless"
     },
     {
       "question": "Are you over 24?",
@@ -383,7 +383,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "over_24"
     },
     {
       "question": "Are you currently in foster care?",
@@ -394,7 +394,7 @@
         "Not Applicable"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "foster_care"
     },
     {
       "question": "Are either of your parents incarcerated?",
@@ -405,7 +405,7 @@
         "Not Sure"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "parents_incarcerated"
     },
     {
       "question": "Have you ever been part of the juvenile justice system?",
@@ -415,7 +415,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "juvie"
     },
     {
       "question": "Do you reside in a single-parent household?",
@@ -425,7 +425,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "reside_single_parent"
     },
     {
       "question": "Do you receive free or reduced lunch at school?",
@@ -436,7 +436,7 @@
         "Not Applicable"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "free_reduced_lunch"
     },
     {
       "question": "Did you drop out of high school?",
@@ -446,7 +446,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "drop_high_school"
     },
     {
       "question": "Are you parenting?",
@@ -457,13 +457,13 @@
         "Expecting"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "parenting"
     },
     {
       "question": "Expected Due Date",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "expected_due_date"
     },
     {
       "question": "Do you lack significant work history?",
@@ -473,7 +473,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "lack_work_history"
     }
   ],
   "Household and Family Info": [
@@ -488,7 +488,7 @@
         "Widow/Widower"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "marital_status"
     },
     {
       "question": "What is your household's annual income?",
@@ -512,25 +512,25 @@
         "$120,001+"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "annual_income"
     },
     {
       "question": "How many children 17 years old and under live in your household?",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "children_under_17"
     },
     {
       "question": "How many young adults 18-24 years old live in your household?",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "adult_18_24"
     },
     {
       "question": "How many adults live in your household?",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "adult_over_25"
     },
     {
       "question": "Do you have a checking?",
@@ -540,7 +540,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "have_checking"
     },
     {
       "question": "Do you have a savings account?",
@@ -550,7 +550,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "have_savings_account"
     },
     {
       "question": "Do you have a payday loan?",
@@ -560,7 +560,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "have_payday_loan"
     },
     {
       "question": "Do you have a car title loan?",
@@ -570,7 +570,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "have_car_loan"
     }
   ],
   "Public Assistance Benefits": [
@@ -590,7 +590,7 @@
         "WIC (Women, Infants, and Children)"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "public_assistance"
     },
     {
       "question": "Are you registered with a selective service?",
@@ -602,7 +602,7 @@
         "Not Applicable"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "selective_service"
     }
   ],
   "Emergency Contact Information": [
@@ -610,31 +610,31 @@
       "question": "Emergency Contact Name",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "emergency_contact_name"
     },
     {
       "question": "Emergency Contact Relationship to You",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "emergency_contact_relationship"
     },
     {
       "question": "Emergency Contact Mobile Phone",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "emergency_contact_mobile_phone"
     },
     {
       "question": "Emergency Contact Alternate Phone",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "emergency_contact_alternate_phone"
     },
     {
       "question": "Emergency Contact Address",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "emergency_contact_address"
     }
   ],
   "Military Status": [
@@ -646,7 +646,7 @@
         "No"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "veteran"
     },
     {
       "question": "Military Status",
@@ -658,13 +658,13 @@
         "General Discharge"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "military_status"
     },
     {
       "question": "Date of Discharge",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "date_discharge"
     },
     {
       "question": "Which branch did you serve in?",
@@ -679,7 +679,7 @@
         "Coast Guard"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "branch_served"
     }
   ],
   "Client Needs": [
@@ -687,7 +687,7 @@
       "question": "Please rate the three services that you are most interested in below:",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "rate_below"
     },
     {
       "question": "Highest Priority",
@@ -701,7 +701,7 @@
         "Financial Education"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "high_priority"
     },
     {
       "question": "Medium Priority",
@@ -715,7 +715,7 @@
         "Financial Education"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "medium_priority"
     },
     {
       "question": "Lowest Priority",
@@ -729,7 +729,7 @@
         "Financial Education"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "low_priority"
     },
     {
       "question": "What is your availability for these activities?",
@@ -742,7 +742,7 @@
         "Weekends (Saturday & Sunday)"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "availability"
     },
     {
       "question": "How much time are you able or willing to invest in a program?",
@@ -753,7 +753,7 @@
         "Up to one year"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "time_invest"
     },
     {
       "question": "What do you believe has kept you from getting a job?",
@@ -770,7 +770,7 @@
         "Other"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "block_get_job"
     },
     {
       "question": "What has prevented you from maintaining a job?",
@@ -787,13 +787,13 @@
         "Other"
       ],
       "type": "dropdown",
-      "var_name": "hello"
+      "var_name": "prevent_maintain_job"
     },
     {
-      "question": "What is your wage expectation?\u00a0",
+      "question": "What is your wage expectation?",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "expected_wage"
     },
     {
       "question": "Are you able to take and pass a drug screening within 24 hours?",
@@ -804,7 +804,7 @@
         "Unsure"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "drug screening"
     },
     {
       "question": "Are you interested in sharing your SER story after receiving SER services?",
@@ -815,13 +815,13 @@
         "Not Sure"
       ],
       "type": "checkbox",
-      "var_name": "hello"
+      "var_name": "share_SER"
     },
     {
       "question": "Is there anything else you think we should know?",
       "answer": [],
       "type": "text",
-      "var_name": "hello"
+      "var_name": "other"
     }
   ]
 }
