@@ -8,7 +8,8 @@
       {
         "question": "First Name",
         "answer": [],
-        "type": "text"
+        "type": "text",
+        "var_name": "first_name"
       },
       {
         "question": "Middle Name",

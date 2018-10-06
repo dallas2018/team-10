@@ -43,17 +43,17 @@ for i in (soup.findAll('fieldset', {'class': 'section column'})):
 
 type = 'dropdown'
 master_dct = {}
-for title, questions in upper_dct.items():
-    master_dct[title] = []
-    for question, answer in questions.items():
-        if not answer:
-            type = 'text'
-        else:
-            type = 'dropdown'
-        if 'Yes' in answer:
-            type = 'checkbox'
-        master_dct[title].append({'question': question, 'answer': answer,
-            'type': type}) 
 
-with open('question.json', 'w') as f:
+master_dct[title] = []
+for question, answer in questions.items():
+    if not answer:
+        type = 'text'
+    else:
+        type = 'dropdown'
+    if 'Yes' in answer:
+        type = 'checkbox'
+    master_dct[title].append({'question': question, 'answer': answer,
+        'type': type}) 
+
+with open('answerandtype.json', 'w') as f:
     json.dump(master_dct, f, indent=2)
