@@ -244,12 +244,12 @@
       "question": "Race\u00a0",
       "answer": [
         "Please select...",
-        "Black or African American",
         "American Indian or Alaskan Native",
-        "Asian (not Pacific Islander)",
+        "Asian (non Pacific Islander)",
+        "Black or African American",
         "Hawaiian Native or Pacific Islander",
         "White or Caucasian",
-        "Two or More",
+        "Mixed",
         "Other"
       ],
       "type": "dropdown",
