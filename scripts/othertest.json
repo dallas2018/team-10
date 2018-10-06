@@ -1,0 +1,456 @@
+{
+  "Contact Information": [{
+    "Question": "Your Email:",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "A Password:",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Confirm Password:",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "First Name",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Middle Name",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Last Name",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "How did you hear about SER Jobs for Progress?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Street Address",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "City",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "State",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Postal Code",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "County",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Other County",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Social Security #",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Date of Birth",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Email Address",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Work Phone",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Mobile Phone",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Home Phone",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Preferred Phone",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Facebook Page",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Twitter Handle",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Instagram Username",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "LinkedIn Profile",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Demographic Information": [{
+    "Question": "Gender",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you consider yourself Hispanic or Latino?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Race",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you speak any languages other than English?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you need any special accommodations in order to participate in training or performing tasks at work?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you authorized to work in the United States?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "I attest, under penalty of perjury, that I am a (choose one of the following):",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you have a valid form of identification?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What type of identification do you have?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What type of Driver's License do you have?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is your primary method of transportation?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is your housing status?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you at risk of becoming homeless?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you over 24?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you currently in foster care?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are either of your parents incarcerated?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Have you ever been part of the juvenile justice system?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you reside in a single-parent household?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you receive free or reduced lunch at school?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Did you drop out of high school?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you parenting?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Expected Due Date",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you lack significant work history?",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Household and Family Info": [{
+    "Question": "Marital Status",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is your household's annual income?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "How many children 17 years old and under live in your household?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "How many young adults 18-24 years old live in your household?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "How many adults live in your household?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you have a checking?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you have a savings account?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you have a payday loan?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Do you have a car title loan?",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Public Assistance Benefits": [{
+    "Question": "Are you registered with a selective service?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Emergency Contact Name",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Emergency Contact Relationship to You",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Emergency Contact Mobile Phone",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Emergency Contact Alternate Phone",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Emergency Contact Address",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Emergency Contact Information": [{
+    "Question": "What is the highest level of education that you have reached?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you currently attending school?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Where are you currently studying?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What are you studying/majoring in?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "How would you rate your computer skills?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is your English Literacy level (ability to read/comprehend)?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Please list any certificates you have earned or relevant training experience here:",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Education History": [{
+    "Question": "Are you a veteran?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Military Status",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Date of Discharge",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Which branch did you serve in?",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Military Status": [{
+    "Question": "Have you ever been convicted of a crime(s)?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is the highest conviction that you have received?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Charge(s)",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Other Charge",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Please provide a brief explanation of your conviction:",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you currently on:",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "When does your probation/parole end?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Have you ever been incarcerated?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "# of Years",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "# of Months",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you currently residing in a halfway house?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Please type the name and location of the halfway house you're staying at.",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you currently wearing a Super Intensive Parole Monitor (ankle monitor)?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is the removal date?",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Criminal Status": [{
+    "Question": "What is your current employment situation?",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Crime Details": [{
+    "Question": "Job Title",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Employer Name",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Job Type",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Job Commitment",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Job Start Date",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Job End Date",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Hourly Wage",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Average Hours per Week",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Name of Supervisor",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Supervisor Job Title",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Job Address",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Reason for Leaving",
+    "Answer": [],
+    "Type": ""
+  }],
+  "Employer History": [{
+    "Question": "Highest Priority",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Medium Priority",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Lowest Priority",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is your availability for these activities?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "How much time are you able or willing to invest in a program?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What do you believe has kept you from getting a job?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What has prevented you from maintaining a job?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "What is your wage expectation?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you able to take and pass a drug screening within 24 hours?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Are you interested in sharing your SER story after receiving SER services?",
+    "Answer": [],
+    "Type": ""
+  }, {
+    "Question": "Is there anything else you think we should know?",
+    "Answer": [],
+    "Type": ""
+  }]
+}
