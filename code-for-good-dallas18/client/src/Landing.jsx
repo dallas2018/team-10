@@ -47,6 +47,7 @@ class Landing extends Component {
                 partners liable for information found during this verification
                  or making decisions accordingly.</div>
                <br />
+             <button className={styles.submitButton}
             </div>
         </div>
       </div>
