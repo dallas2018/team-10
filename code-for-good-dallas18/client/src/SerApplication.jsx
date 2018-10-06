@@ -7,6 +7,7 @@ import InputDropdownGroup from './InputDropdownGroup';
 import Footer from './Footer.jsx';
 import styles from './SerApplication.module.css';
 import firebase from './fire.js';
+import recognition from './script.js';
 
 class SerApplication extends Component {
   constructor() {
@@ -390,7 +391,9 @@ class SerApplication extends Component {
               <Dropdown options={drug_screening_arr}/>
               <InputDropdownGroup options={share_SER_arr}>Are you interested in sharing your SER story after receiving SER services?</InputDropdownGroup>
               <Dropdown options={share_SER_arr}/>
-              <InputFieldGroup type="text" name="other" onChange={this.handleChange} value={this.state.other}>Is there anything else you think we should know?</InputFieldGroup>
+              <InputFieldGroup id="phraseDiv" type="text" name="other" onChange={this.handleChange} value={this.state.other}>Is there anything else you think we should know?</InputFieldGroup>
+              <button id="startRecognizeOnceAsyncButton">Start recognition</button>
+              <script src="script.js"></script>
             </InputSection>
 
             {isSubmitted ?
