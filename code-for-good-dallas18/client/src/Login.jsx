@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import InputField from './InputField.jsx';
 import fire from './fire';
-import InputFieldGroup from './InputFieldGroup.jsx';
-import InputSection from './InputSection.jsx';
-import SerApplication from './SerApplication.jsx';
-import Login from './Login.jsx';
-import './App.css';
+import styles from './Login.module.css';
 
-class App extends Component {
+class Login extends Component {
   state = {
     response: ''
   };
@@ -29,15 +24,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">SER Houston - Online Application</h1>
-        </header>
-        <Login />
-        <SerApplication />
+      <div className="login">
+        <h1 className={styles.loginHeader}>Login</h1>
+        <span>Email</span>
+        <input type="email" name="Email" value=""/>
+        <span>Password</span>
+        <input type="password" name="Password" value=""/>
+        <button type="submit">Login</button>
       </div>
     );
   }
 }
 
-export default App;
+export default Login;

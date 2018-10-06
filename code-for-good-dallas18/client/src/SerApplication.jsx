@@ -30,7 +30,6 @@ class SerApplication extends Component {
       <div className="App">
         <InputSection type="text" required="false">Hello</InputSection>
         
-
         <p className="App-intro">{this.state.response}</p>
       </div>
     );
