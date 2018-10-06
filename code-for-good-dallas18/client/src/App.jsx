@@ -8,6 +8,7 @@ import Landing from './Landing.jsx';
 import Login from './Login.jsx';
 import Signup from './Signup.jsx';
 import Footer from './Footer.jsx';
+import Completed from './Completed.jsx';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.jpg';
@@ -37,7 +38,9 @@ class App extends Component {
       <div className="App">
         <header className="appHeader">
           <div className="logoWrapper">
-            <img className="logo" href="https://serhouston.org" src={logo} alt="logo" />
+            <a href="http://serhouston.org">
+              <img className="logo" src={logo} alt="logo" />
+            </a>
           </div>
           <h1 className="App-title">SER Houston - Application</h1>
         </header>
@@ -48,6 +51,7 @@ class App extends Component {
               <Route path="/login" component={Login}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/app" component={SerApplication}/>
+              <Route path="/done" component={Completed}/>
             </div>
           </Router>
         </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from './fire.js';
 import styles from './Signup.module.css';
+import InputFieldGroup from './InputFieldGroup';
 
 class Signup extends Component {
   state = {
@@ -24,13 +25,22 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="login">
+      <div className={styles.login}>
         <h1 className={styles.signupHeader}>Sign Up</h1>
-        <span>Email</span>
-        <input type="email" name="Email" defaultValue=""/><br/>
-        <span>Password</span>
-        <input type="password" name="Password" defaultValue=""/><br/>
-        <button type="submit">Sign Up</button>
+        <div className={styles.questionWrapper}>
+          <div className={styles.qBlock}>
+            <span className={styles.inputQuestion}>Email</span>
+            <input className={styles.input} type="email" name="Email" defaultValue=""/><br/>
+          </div>
+          <br/>
+          <div className={styles.qBlock}>
+            <span className={styles.inputQuestion}>Password</span>
+            <input className={styles.input} type="password" name="Password" defaultValue=""/><br/>
+          </div>
+          <div className={styles.buttonWrapper}>
+            <button type="submit">Sign Up</button>
+          </div>
+        </div>
       </div>
     );
   }

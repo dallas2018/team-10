@@ -6,13 +6,16 @@ import Dropdown from './Dropdown.jsx';
 import InputDropdownGroup from './InputDropdownGroup';
 import Footer from './Footer.jsx';
 import styles from './SerApplication.module.css';
+import { BrowserRouter, Link, Redirect } from 'react-router-dom'
 import firebase from './fire.js';
-import recognition from './script.js';
+import recognition, { DOMloaded } from './script.js';
+import logo from './assets/logo.jpg';
 
 class SerApplication extends Component {
   constructor() {
     super();
     this.state = {
+      navigate: false,
       isSubmitted: false,
       first_name: '',
       middle_name: '',
@@ -127,7 +130,7 @@ class SerApplication extends Component {
       first_name: this.state.first_name,
       middle_name: this.state.middle_name,
       last_name: this.state.last_name,
-      hear_ser_jobs_from: this.state.hear_ser_jobs,
+      hear_ser_jobs_from: this.state.hear_ser_jobs_from,
       street_addr: this.state.street_addr,
       city: this.state.city,
       state: this.state.state,
@@ -156,17 +159,7 @@ class SerApplication extends Component {
       license_type: this.state.license_type,
       transportation: this.state.transportation,
       housing_status: this.state.housing_status,
-      risk_homeless: this.state.ris_homeless,
-      over_24: this.state.over_24,
-      foster_care: this.state.foster_care,
-      parents_incarcerated: this.state.parents_incarcerated,
-      juvie: this.state.juvie,
-      reside_single_parent: this.state.reside_single_parent,
-      free_reduced_lunch: this.state.free_reduced_lunch,
-      drop_high_school: this.state.drop_high_school,
-      parenting: this.state.parenting,
-      expected_due_date: this.state.expected_due_date,
-      lack_work_history: this.state.lack_work_history,
+      risk_homeless: this.state.risk_homeless,
       marital_status: this.state.marital_status,
       annual_income: this.state.annual_income,
       children_under_17: this.state.children_under_17,
@@ -183,11 +176,6 @@ class SerApplication extends Component {
       emergency_contact_mobile_phone: this.state.emergency_contact_mobile_phone,
       emergency_contact_alternate_phone: this.state.emergency_contact_alternate_phone,
       emergency_contact_address: this.state.emergency_contact_address,
-      veteran: this.state.veteran,
-      military_status: this.state.military_status,
-      date_discharge: this.state.date_discharge,
-      branch_served: this.state.branch_server,
-      rate_below: this.state.rate_below,
       high_priority: this.state.high_priority,
       medium_priority: this.state.medium_priority,
       low_priority: this.state.low_priority,
@@ -204,8 +192,17 @@ class SerApplication extends Component {
     this.setState({
       isSubmitted: true
     });
+		setTimeout( function() {
+			this.setState({
+        isSubmitted: false,
+        navigate: true
+      });
+		}.bind(this), 3000);
   }
 
+  recognition() {
+    recognition.recognition();
+  }
 
   render() {
     const isSubmitted = this.state.isSubmitted;
@@ -254,6 +251,9 @@ class SerApplication extends Component {
     const prevent_maintain_job_arr = ["Absenteeism", "Lack of support", "Learning disability", "Maintaining relationship", "Physical disability", "Substance abuse", "Tardiness", "Transportation", "Child care", "Other"];
     const drug_screening_arr = ["Please select...", "Yes", "No", "Unsure"];
     const share_SER_arr = ["Please select...", "Yes", "No", "Not Sure"];
+    if (this.state.navigate) {
+      return <Redirect to="/done" />
+    }
     return (
       <div className="App">
           <form onSubmit={this.handleSubmit}>
@@ -264,95 +264,63 @@ class SerApplication extends Component {
                 <InputFieldGroup type="text" name="last_name" onChange={this.handleChange} value={this.state.last_name}>Last Name*</InputFieldGroup>
               </div>
               <InputDropdownGroup options={hear_ser_jobs_from_arr}>How did you hear about SER Jobs for Progress?</InputDropdownGroup>
-              <Dropdown options={hear_ser_jobs_from_arr}/>
-              <InputFieldGroup type="text" name="street_addr" onChange={this.handleChange} value={this.state.street_addr}>Street Address</InputFieldGroup>
-              <InputFieldGroup type="text" name="city" onChange={this.handleChange} value={this.state.city}>City</InputFieldGroup>
-              <InputDropdownGroup options={state_arr}>State</InputDropdownGroup>
-              <Dropdown options={state_arr}/>
-              <InputFieldGroup type="text" name="postal_code" onChange={this.handleChange} value={this.state.postal_code}>Postal Code</InputFieldGroup>
-              <InputDropdownGroup options={county_arr}>County</InputDropdownGroup>
-              <Dropdown options={county_arr}/>
-              <InputFieldGroup type="text" name="other_county" onChange={this.handleChange} value={this.state.other_county}>Other County</InputFieldGroup>
+              <div className={styles.addressBlock}>
+                <InputFieldGroup type="text" name="street_addr" onChange={this.handleChange} value={this.state.street_addr}>Street Address</InputFieldGroup>
+                <InputFieldGroup type="text" name="city" onChange={this.handleChange} value={this.state.city}>City</InputFieldGroup>
+                <InputDropdownGroup options={state_arr}>State</InputDropdownGroup>
+                <InputFieldGroup type="text" name="postal_code" onChange={this.handleChange} value={this.state.postal_code}>Postal Code</InputFieldGroup>
+                <InputDropdownGroup options={county_arr}>County</InputDropdownGroup>
+              </div>
               <InputFieldGroup type="text" name="social_security" onChange={this.handleChange} value={this.state.social_security}>Social Security #</InputFieldGroup>
               <InputFieldGroup type="text" name="birthday" onChange={this.handleChange} value={this.state.birthday}>Date of Birth</InputFieldGroup>
               <InputFieldGroup type="text" name="email" onChange={this.handleChange} value={this.state.email}>Email Address</InputFieldGroup>
-              <InputFieldGroup type="text" name="work_phone" onChange={this.handleChange} value={this.state.work_phone}>Work Phone</InputFieldGroup>
-              <InputFieldGroup type="text" name="mobile_phone" onChange={this.handleChange} value={this.state.mobile_phone}>Mobile Phone</InputFieldGroup>
-              <InputFieldGroup type="text" name="home_phone" onChange={this.handleChange} value={this.state.home_phone}>Home Phone</InputFieldGroup>
+              <div className={styles.phoneBlock}>
+                <InputFieldGroup type="text" name="work_phone" onChange={this.handleChange} value={this.state.work_phone}>Work Phone</InputFieldGroup>
+                <InputFieldGroup type="text" name="mobile_phone" onChange={this.handleChange} value={this.state.mobile_phone}>Mobile Phone</InputFieldGroup>
+                <InputFieldGroup type="text" name="home_phone" onChange={this.handleChange} value={this.state.home_phone}>Home Phone</InputFieldGroup>
+              </div>
               <InputDropdownGroup options={preferred_phone_arr}>Preferred Phone</InputDropdownGroup>
-              <Dropdown options={preferred_phone_arr}/>
-              <InputFieldGroup type="text" name="fb_page" onChange={this.handleChange} value={this.state.fb_page}>Facebook Page</InputFieldGroup>
-              <InputFieldGroup type="text" name="twitter_handle" onChange={this.handleChange} value={this.state.twitter_handle}>Twitter Handle</InputFieldGroup>
-              <InputFieldGroup type="text" name="insta_user" onChange={this.handleChange} value={this.state.insta_user}>Instagram Username</InputFieldGroup>
-              <InputFieldGroup type="text" name="linkedin_prof" onChange={this.handleChange} value={this.state.linkedin_prof}>LinkedIn Profile</InputFieldGroup>
+              <div className={styles.socialBlock}>
+                <div className={styles.subSocial}>
+                  <InputFieldGroup type="text" name="fb_page" onChange={this.handleChange} value={this.state.fb_page}>Facebook Page</InputFieldGroup>
+                  <InputFieldGroup type="text" name="twitter_handle" onChange={this.handleChange} value={this.state.twitter_handle}>Twitter Handle</InputFieldGroup>
+                </div>
+                <div className={styles.subSocial}>
+                  <InputFieldGroup type="text" name="insta_user" onChange={this.handleChange} value={this.state.insta_user}>Instagram Username</InputFieldGroup>
+                  <InputFieldGroup type="text" name="linkedin_prof" onChange={this.handleChange} value={this.state.linkedin_prof}>LinkedIn Profile</InputFieldGroup>
+                </div>
+              </div>
             </InputSection>
             <InputSection name="Demographic Information">
               <InputDropdownGroup options={gender_arr}>Gender</InputDropdownGroup>
-              <Dropdown options={gender_arr}/>
+              
               <InputDropdownGroup options={is_hisp_latino_arr}>Do you consider yourself Hispanic or Latino?</InputDropdownGroup>
-              <Dropdown options={is_hisp_latino_arr}/>
               <InputDropdownGroup options={race_arr}>Race </InputDropdownGroup>
-              <Dropdown options={race_arr}/>
               <InputDropdownGroup options={languages_arr}>Do you speak any languages other than English?</InputDropdownGroup>
-              <Dropdown options={languages_arr}/>
-              <InputDropdownGroup options={special_accomodations_arr}>Do you need any special accommodations in order to participate in training or performing tasks at work?</InputDropdownGroup>
-              <Dropdown options={special_accomodations_arr}/>
+              <InputDropdownGroup options={special_accomodations_arr}>Do you need any special accommodations to participate in training/performing tasks at work?</InputDropdownGroup>
               <InputDropdownGroup options={citizenship_arr}>I attest, under penalty of perjury, that I am a (choose one of the following):</InputDropdownGroup>
-              <Dropdown options={citizenship_arr}/>
               <InputDropdownGroup options={valid_id_arr}>Do you have a valid form of identification?</InputDropdownGroup>
-              <Dropdown options={valid_id_arr}/>
               <InputDropdownGroup options={form_id_arr}>What type of identification do you have?</InputDropdownGroup>
-              <Dropdown options={form_id_arr}/>
               <InputDropdownGroup options={license_type_arr}>What type of Driver's License do you have?</InputDropdownGroup>
-              <Dropdown options={license_type_arr}/>
               <InputDropdownGroup options={transportation_arr}>What is your primary method of transportation?</InputDropdownGroup>
-              <Dropdown options={transportation_arr}/>
               <InputDropdownGroup options={housing_status_arr}>What is your housing status?</InputDropdownGroup>
-              <Dropdown options={housing_status_arr}/>
               <InputDropdownGroup options={risk_homeless_arr}>Are you at risk of becoming homeless?</InputDropdownGroup>
-              <Dropdown options={risk_homeless_arr}/>
               <InputDropdownGroup options={over_24_arr}>Are you over 24?</InputDropdownGroup>
-              <Dropdown options={over_24_arr}/>
-              <InputDropdownGroup options={foster_care_arr}>Are you currently in foster care?</InputDropdownGroup>
-              <Dropdown options={foster_care_arr}/>
-              <InputDropdownGroup options={parents_incarcerated_arr}>Are either of your parents incarcerated?</InputDropdownGroup>
-              <Dropdown options={parents_incarcerated_arr}/>
-              <InputDropdownGroup options={juvie_arr}>Have you ever been part of the juvenile justice system?</InputDropdownGroup>
-              <Dropdown options={juvie_arr}/>
-              <InputDropdownGroup options={reside_single_parent_arr}>Do you reside in a single-parent household?</InputDropdownGroup>
-              <Dropdown options={reside_single_parent_arr}/>
-              <InputDropdownGroup options={free_reduced_lunch_arr}>Do you receive free or reduced lunch at school?</InputDropdownGroup>
-              <Dropdown options={free_reduced_lunch_arr}/>
-              <InputDropdownGroup options={drop_high_school_arr}>Did you drop out of high school?</InputDropdownGroup>
-              <Dropdown options={drop_high_school_arr}/>
-              <InputDropdownGroup options={parenting_arr}>Are you parenting?</InputDropdownGroup>
-              <Dropdown options={parenting_arr}/>
-              <InputFieldGroup type="text" name="expected_due_date" onChange={this.handleChange} value={this.state.expected_due_date}>Expected Due Date</InputFieldGroup>
-              <InputDropdownGroup options={lack_work_history_arr}>Do you lack significant work history?</InputDropdownGroup>
-              <Dropdown options={lack_work_history_arr}/>
             </InputSection>
             <InputSection name="Household and Family Info">
               <InputDropdownGroup options={marital_status_arr}>Marital Status</InputDropdownGroup>
-              <Dropdown options={marital_status_arr}/>
               <InputDropdownGroup options={annual_income_arr}>What is your household's annual income?</InputDropdownGroup>
-              <Dropdown options={annual_income_arr}/>
               <InputFieldGroup type="text" name="children_under_17" onChange={this.handleChange} value={this.state.children_under_17}>How many children 17 years old and under live in your household?</InputFieldGroup>
               <InputFieldGroup type="text" name="adult_18_24" onChange={this.handleChange} value={this.state.adult_18_24}>How many young adults 18-24 years old live in your household?</InputFieldGroup>
               <InputFieldGroup type="text" name="adult_over_25" onChange={this.handleChange} value={this.state.adult_over_25}>How many adults live in your household?</InputFieldGroup>
               <InputDropdownGroup options={have_checking_arr}>Do you have a checking?</InputDropdownGroup>
-              <Dropdown options={have_checking_arr}/>
               <InputDropdownGroup options={have_savings_account_arr}>Do you have a savings account?</InputDropdownGroup>
-              <Dropdown options={have_savings_account_arr}/>
               <InputDropdownGroup options={have_payday_loan_arr}>Do you have a payday loan?</InputDropdownGroup>
-              <Dropdown options={have_payday_loan_arr}/>
               <InputDropdownGroup options={have_car_loan_arr}>Do you have a car title loan?</InputDropdownGroup>
-              <Dropdown options={have_car_loan_arr}/>
             </InputSection>
             <InputSection name="Public Assistance Benefits">
               <InputDropdownGroup options={public_assistance_arr}>Are you currently receiving any of the following forms of public assistance?</InputDropdownGroup>
-              <Dropdown options={public_assistance_arr}/>
               <InputDropdownGroup options={selective_service_arr}>Are you registered with a selective service?</InputDropdownGroup>
-              <Dropdown options={selective_service_arr}/>
             </InputSection>
             <InputSection name="Emergency Contact Information">
               <InputFieldGroup type="text" name="emergency_contact_name" onChange={this.handleChange} value={this.state.emergency_contact_name}>Emergency Contact Name</InputFieldGroup>
@@ -363,37 +331,22 @@ class SerApplication extends Component {
             </InputSection>
             <InputSection name="Military Status">
               <InputDropdownGroup options={veteran_arr}>Are you a veteran?</InputDropdownGroup>
-              <Dropdown options={veteran_arr}/>
-              <InputDropdownGroup options={military_status_arr}>Military Status</InputDropdownGroup>
-              <Dropdown options={military_status_arr}/>
-              <InputFieldGroup type="text" name="date_discharge" onChange={this.handleChange} value={this.state.date_discharge}>Date of Discharge</InputFieldGroup>
-              <InputDropdownGroup options={branch_served_arr}>Which branch did you serve in?</InputDropdownGroup>
-              <Dropdown options={branch_served_arr}/>
             </InputSection>
             <InputSection name="Client Needs">
               <InputFieldGroup type="text" name="rate_below" onChange={this.handleChange} value={this.state.rate_below}>Please rate the three services that you are most interested in below:</InputFieldGroup>
               <InputDropdownGroup options={high_priority_arr}>Highest Priority</InputDropdownGroup>
-              <Dropdown options={high_priority_arr}/>
               <InputDropdownGroup options={medium_priority_arr}>Medium Priority</InputDropdownGroup>
-              <Dropdown options={medium_priority_arr}/>
               <InputDropdownGroup options={low_priority_arr}>Lowest Priority</InputDropdownGroup>
-              <Dropdown options={low_priority_arr}/>
               <InputDropdownGroup options={availability_arr}>What is your availability for these activities?</InputDropdownGroup>
-              <Dropdown options={availability_arr}/>
               <InputDropdownGroup options={time_invest_arr}>How much time are you able or willing to invest in a program?</InputDropdownGroup>
-              <Dropdown options={time_invest_arr}/>
               <InputDropdownGroup options={block_get_job_arr}>What do you believe has kept you from getting a job?</InputDropdownGroup>
-              <Dropdown options={block_get_job_arr}/>
               <InputDropdownGroup options={prevent_maintain_job_arr}>What has prevented you from maintaining a job?</InputDropdownGroup>
-              <Dropdown options={prevent_maintain_job_arr}/>
               <InputFieldGroup type="text" name="expected_wage" onChange={this.handleChange} value={this.state.expected_wage}>What is your wage expectation?</InputFieldGroup>
               <InputDropdownGroup options={drug_screening_arr}>Are you able to take and pass a drug screening within 24 hours?</InputDropdownGroup>
-              <Dropdown options={drug_screening_arr}/>
               <InputDropdownGroup options={share_SER_arr}>Are you interested in sharing your SER story after receiving SER services?</InputDropdownGroup>
               <Dropdown options={share_SER_arr}/>
               <InputFieldGroup id="phraseDiv" type="text" name="other" onChange={this.handleChange} value={this.state.other}>Is there anything else you think we should know?</InputFieldGroup>
-              <button id="startRecognizeOnceAsyncButton">Start recognition</button>
-              <script src="script.js"></script>
+              <button id="startRecognizeOnceAsyncButton" onClick={() => recognition()}>Start recognition</button>
             </InputSection>
 
             {isSubmitted ?

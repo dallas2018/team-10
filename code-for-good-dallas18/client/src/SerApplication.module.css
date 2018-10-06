@@ -5,6 +5,19 @@
   font-size: 1.5rem;
 }
 
+.appHeader {
+  background-color: #fff;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0 5vw;
+  color: #409AD6;
+  border-radius: 50px;
+}
+
 .submittedButton {
   border: solid 3px #28bb63;
   background-color: #28bb63;
@@ -17,5 +30,14 @@
 .nameBlock {
   display: flex;
   flex-direction: row;
+}
 
+.phoneBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.subSocial {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,0 +1,16 @@
+.completed {
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.h1 {
+  color: #fff;
+}
+
+.h2 {
+  color: #fff;
+}
