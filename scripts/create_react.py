@@ -87,7 +87,11 @@ ret = """
 input_field_section = "            <InputSection name=\"{}\">"
 input_field_section_end = "            </InputSection>"
 
-question = "              <InputFieldGroup type=\"{question_type}\" name=\"{var_name}\" onChange={{this.handleChange}} value={{this.state.{var_name}}}>{ques}</InputFieldGroup>"
+text_question = "              <InputFieldGroup type=\"{question_type}\" name=\"{var_name}\" onChange={{this.handleChange}} value={{this.state.{var_name}}}>{ques}</InputFieldGroup>"
+
+drop_question = "              <InputDropdownGroup options={{{arr_name}}}>{ques}</InputDropdownGroup>
+              <Dropdown options={{{arr_name}}}/>"
+
 
 with open('question_v2.json', 'r') as f:
     x = json.load(f)
@@ -120,8 +124,10 @@ print(ret_top)
 for section, questions in x.items():
     print(input_field_section.format(section))
     for question_obj in questions:
+        if question_obj['var_name'] == 'dropdown':
+            arr_name = 'a'
         if question_obj['var_name'] != 'hello':
-            print(question.format(question_type=question_obj['type'],
+            print(text_question.format(question_type=question_obj['type'],
                 ques=question_obj['question'],
                 var_name=question_obj['var_name']))
             state_lst.append(question_obj['var_name'] + ': \'\',')
