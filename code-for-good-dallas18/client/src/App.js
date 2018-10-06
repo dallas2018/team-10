@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import InputField from './InputField.jsx';
-import fire from './fire';
+import fire, {db} from './fire';
 import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
 import './App.css';
@@ -11,7 +11,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fire.database().ref("Applicant").set({question: 'name', answer: 'jmo', bob: 'bob', shui: 'shui'});
+    db.ref("Applicant").set({question: 'test', answer: 'jmo', bob: 'bob', shui: 'shui'});
     this.callApi()
       .then(res => this.setState({ response: res.express }))
       .catch(err => console.log(err));
