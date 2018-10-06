@@ -11,7 +11,6 @@ import Footer from './Footer.jsx';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.jpg';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   state = {
@@ -19,7 +18,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    db.ref("Applicant").set({question: 'test', answer: 'jmo', bob: 'bob', shui: 'shui'});
     this.callApi()
       .then(res => this.setState({ response: res.express }))
       .catch(err => console.log(err));

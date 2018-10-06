@@ -12,5 +12,10 @@
   padding: 1vh 5vw;
   font-size: 1.5rem;
   color: #fff;
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: row;
 
 }
