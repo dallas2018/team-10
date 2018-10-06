@@ -5,6 +5,7 @@ import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
 import SerApplication from './SerApplication.jsx';
 import Login from './Login.jsx';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -35,6 +36,13 @@ class App extends Component {
         </header>
         <Login />
         <SerApplication />
+				<Router>
+					<div>
+						<Route exact path="/" component={App}/>
+						<Route path="/login" component={Login}/>
+						<Route path="/app" component={App}/>
+					</div>
+				</Router>
       </div>
     );
   }
