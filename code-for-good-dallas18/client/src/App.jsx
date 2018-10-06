@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import InputField from './InputField.jsx';
+import fire from './fire';
 import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
-
 import './App.css';
 
 class App extends Component {
