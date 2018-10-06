@@ -1,0 +1,17 @@
+.pictureWrapper {
+  min-height: 10vh;
+}
+
+.Landing {
+  background-color: #fff;
+}
+
+.container {
+  color #000;
+  padding: 10vh 30vh;
+}
+
+.title {
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from './fire';
 import styles from './Landing.module.css';
+import wallpaper from './assets/wallpaper.jpg';
 
 class Landing extends Component {
   state = {
@@ -24,12 +25,20 @@ class Landing extends Component {
 
   render() {
     return (
-      <div className="landing">
-        <div className="App-title-w">
-          
+      <div className="Landing">
+        <div class="pictureWrapperr">
+          <img className="wallpaper" src={wallpaper} alt="wallpaper">
+            <h1>Apply for Services</h1>
+          </img>
         </div>
-        <div className="App-title-b">
-
+        <div className="container">
+          <h2 className="title">Application Disclaimer</h2>
+          <div>By completing the application:</div>
+          <div>I certify that the information provided in this application
+            and all related documents is a true and accurate representation of
+            my experience and abilities. If the information I have provided is
+            found to be false, my application may be cancelled, my training
+            terminated, or my employment may be terminated.</div>
         </div>
       </div>
     );
