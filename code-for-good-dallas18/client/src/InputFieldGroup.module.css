@@ -4,5 +4,6 @@
 }
 
 .inputQuestion {
-  color: #fff;
+  display: flex;
+  color: #008AB4;
 }

@@ -1,5 +1,7 @@
-.inputFieldSection {
+.inputSection {
   position: relative;
   display: block;
-  background-color: #008AB4;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 50px 50px;
 }

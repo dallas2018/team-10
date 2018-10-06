@@ -1,4 +1,16 @@
 .inputField {
-  position: relative;
-  display:block;
+  display: flex;
+}
+
+.input {
+  font-size: 20px;
+  padding: 6px 8px;
+  border: solid 3px #cecece;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.input:focus {
+  border: solid 3px #008AB4;
+  outline: none;
 }

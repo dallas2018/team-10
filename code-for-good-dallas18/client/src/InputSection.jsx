@@ -11,7 +11,7 @@ const InputSection = ({
   required
 }) => (
     <div className={styles.inputSection}>
-      <InputFieldGroup value={value} type={type} name={name} required={required}>Test</InputFieldGroup>
+      {children}
     </div>
 );
 

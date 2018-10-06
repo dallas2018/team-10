@@ -38,14 +38,16 @@ class App extends Component {
           <h1 className="App-title">SER Houston</h1>
           <h2 className="App-subtitle">Online Application</h2>
         </header>
-				<Router>
-					<div>
-						<Route exact path="/" component={Landing}/>
-						<Route path="/login" component={Login}/>
-						<Route path="/signup" component={Signup}/>
-						<Route path="/app" component={SerApplication}/>
-					</div>
-				</Router>
+        <div className="container">
+          <Router>
+            <div>
+              <Route exact path="/" component={Landing}/>
+              <Route path="/login" component={Login}/>
+              <Route path="/signup" component={Signup}/>
+              <Route path="/app" component={SerApplication}/>
+            </div>
+          </Router>
+        </div>
       </div>
     );
   }

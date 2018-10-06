@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import InputField from './InputField.jsx';
-import fire from './fire';
 import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
+import DemographicInformation from './question-groups/DemographicInformation';
 import styles from './SerApplication.module.css';
 import firebase from './fire.js';
 
@@ -16,10 +16,6 @@ class SerApplication extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  state = {
-    response: ''
-  };
 
   componentDidMount() {
     this.callApi()
@@ -60,13 +56,9 @@ class SerApplication extends Component {
     return (
       <div className="App">
         <form onSubmit={this.handleSubmit}>
-          <InputFieldGroup type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName}>First Name</InputFieldGroup>
-          <br/>
-          <InputFieldGroup type="text" name="lastName" onChange={this.handleChange} value={this.state.lastName}>Last Name</InputFieldGroup>
-          <br/>
-          <button>Submit</button>
+          <DemographicInformation />
         </form>
-        
+        <button>Submit</button>
         <p className="App-intro">{this.state.response}</p>
       </div>
     );

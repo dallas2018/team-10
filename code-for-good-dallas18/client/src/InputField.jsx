@@ -10,7 +10,7 @@ const InputField = ({
   onChange
 }) => (
     <div className={styles.inputField}>
-      <input value={value} type={type} name={name} onChange={onChange} required={required} />
+      <input className={styles.input} value={value} type={type} name={name} onChange={onChange} required={required} />
     </div>
 );
 

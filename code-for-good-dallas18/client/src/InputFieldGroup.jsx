@@ -1,7 +1,7 @@
 import React from 'react';
 import InputField from './InputField';
 import PropTypes from 'prop-types';
-import styles from './InputField.module.css';
+import styles from './InputFieldGroup.module.css';
 
 const InputFieldGroup = ({
   children,
@@ -12,7 +12,9 @@ const InputFieldGroup = ({
   required
 }) => (
     <div className={styles.inputFieldGroup}>
-      <p className={styles.inputQuestion}>{children}</p>
+      <div className={styles.inputHeader}>
+        <span className={styles.inputQuestion}>{children}</span>
+      </div>
       <InputField value={value} type={type} name={name} onChange={onChange} required={required} />
     </div>
 );
