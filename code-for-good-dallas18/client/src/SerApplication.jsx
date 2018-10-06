@@ -6,12 +6,15 @@ import Dropdown from './Dropdown.jsx';
 import InputDropdownGroup from './InputDropdownGroup';
 import Footer from './Footer.jsx';
 import styles from './SerApplication.module.css';
+import { BrowserRouter, Link, Redirect } from 'react-router-dom'
 import firebase from './fire.js';
+import logo from './assets/logo.jpg';
 
 class SerApplication extends Component {
   constructor() {
     super();
     this.state = {
+      navigate: false,
       isSubmitted: false,
       first_name: '',
       middle_name: '',
@@ -156,16 +159,6 @@ class SerApplication extends Component {
       transportation: this.state.transportation,
       housing_status: this.state.housing_status,
       risk_homeless: this.state.risk_homeless,
-      over_24: this.state.over_24,
-      foster_care: this.state.foster_care,
-      parents_incarcerated: this.state.parents_incarcerated,
-      juvie: this.state.juvie,
-      reside_single_parent: this.state.reside_single_parent,
-      free_reduced_lunch: this.state.free_reduced_lunch,
-      drop_high_school: this.state.drop_high_school,
-      parenting: this.state.parenting,
-      expected_due_date: this.state.expected_due_date,
-      lack_work_history: this.state.lack_work_history,
       marital_status: this.state.marital_status,
       annual_income: this.state.annual_income,
       children_under_17: this.state.children_under_17,
@@ -182,8 +175,6 @@ class SerApplication extends Component {
       emergency_contact_mobile_phone: this.state.emergency_contact_mobile_phone,
       emergency_contact_alternate_phone: this.state.emergency_contact_alternate_phone,
       emergency_contact_address: this.state.emergency_contact_address,
-      veteran: this.state.veteran,
-      rate_below: this.state.rate_below,
       high_priority: this.state.high_priority,
       medium_priority: this.state.medium_priority,
       low_priority: this.state.low_priority,
@@ -201,8 +192,11 @@ class SerApplication extends Component {
       isSubmitted: true
     });
 		setTimeout( function() {
-			this.setState({isSubmitted: false});
-		}.bind(this), 7000);
+			this.setState({
+        isSubmitted: false,
+        navigate: true
+      });
+		}.bind(this), 3000);
   }
 
   render() {
@@ -252,6 +246,9 @@ class SerApplication extends Component {
     const prevent_maintain_job_arr = ["Absenteeism", "Lack of support", "Learning disability", "Maintaining relationship", "Physical disability", "Substance abuse", "Tardiness", "Transportation", "Child care", "Other"];
     const drug_screening_arr = ["Please select...", "Yes", "No", "Unsure"];
     const share_SER_arr = ["Please select...", "Yes", "No", "Not Sure"];
+    if (this.state.navigate) {
+      return <Redirect to="/done" />
+    }
     return (
       <div className="App">
           <form onSubmit={this.handleSubmit}>
