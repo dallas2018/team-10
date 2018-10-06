@@ -11,6 +11,7 @@ import Footer from './Footer.jsx';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import logo from './assets/logo.jpg';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   state = {
