@@ -1,30 +1,21 @@
 .submitButton {
   border: solid 3px #fff;
   border-radius: 15px;
-  padding: 1vh 5vw;
+  padding: 2vh 8vw;
   font-size: 1.5rem;
-}
-
-.appHeader {
-  background-color: #fff;
-  min-height: 5vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  padding: 0 5vw;
-  color: #409AD6;
-  border-radius: 50px;
+  text-align: center;
+  width: auto;
 }
 
 .submittedButton {
+  width: auto;
   border: solid 3px #28bb63;
   background-color: #28bb63;
   border-radius: 15px;
-  padding: 1vh 5vw;
+  padding: 2vh 8vw;
   font-size: 1.5rem;
   color: #fff;
+  text-align: center;
 }
 
 .nameBlock {
