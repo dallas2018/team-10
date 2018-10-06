@@ -1,3 +1,4 @@
-.inputFIeld {
-  color: #123123;
+.inputField {
+  position: relative;
+  display:block;
 }
