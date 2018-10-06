@@ -5,12 +5,10 @@ import styles from './InputSection.module.css';
 
 const InputSection = ({
   children,
-  value,
-  type,
-  name,
-  required
+  name
 }) => (
     <div className={styles.inputSection}>
+      <span className={styles.inputSectionHeader}>{name}</span>
       {children}
     </div>
 );
@@ -20,10 +18,7 @@ InputSection.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  value: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  required: PropTypes.bool.isRequired
+  name: PropTypes.string.isRequired
 };
 
 export default InputSection;

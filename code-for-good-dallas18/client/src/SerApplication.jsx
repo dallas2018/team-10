@@ -46,19 +46,18 @@ class SerApplication extends Component {
   	  lastName: this.state.lastName
   	}
   	itemsRef.push(item);
-  	this.setState({
-  	  firstName: '',
-  	  lastName: ''
-  	});
   }
 
   render() {
     return (
       <div className="App">
-        <form onSubmit={this.handleSubmit}>
-          <DemographicInformation />
-        </form>
-        <button>Submit</button>
+          <form onSubmit={this.handleSubmit}>
+            <InputSection name="Demographic Information">
+              <InputFieldGroup type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName}>First Name</InputFieldGroup>
+              <InputFieldGroup type="text" name="lastName" onChange={this.handleChange} value={this.state.lastName}>Last Name</InputFieldGroup>
+            </InputSection>
+            <button>Submit</button>
+          </form>
         <p className="App-intro">{this.state.response}</p>
       </div>
     );
