@@ -38,6 +38,12 @@ class Landing extends Component {
               my experience and abilities. If the information I have provided is
               found to be false, my application may be cancelled, my training
               terminated, or my employment may be terminated.</div>
+            <div>I agree to allow SER – Jobs for Progress and any business
+               partners to verify the information I’ve provided, including
+               previous employment, education, references, and background.
+               I will not hold the SER – Jobs for Progress or its project
+                partners liable for information found during this verification
+                 or making decisions accordingly.</div>
             </div>
         </div>
       </div>
