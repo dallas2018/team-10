@@ -59,9 +59,11 @@ code = """
 
 """
 
-ret_top = """
+ret_top_top = """
   render() {
     return (
+"""
+ret_top_bot = """
       <div className="App">
           <form onSubmit={this.handleSubmit}>
 """
@@ -84,19 +86,20 @@ ret = """
             </InputSection>
 """
 
-input_field_section = "            <InputSection name=\"{}\">"
-input_field_section_end = "            </InputSection>"
+input_field_section = "            <InputSection name=\"{}\">\n"
+input_field_section_end = "            </InputSection>\n"
 
-text_question = "              <InputFieldGroup type=\"{question_type}\" name=\"{var_name}\" onChange={{this.handleChange}} value={{this.state.{var_name}}}>{ques}</InputFieldGroup>"
+text_question = "              <InputFieldGroup type=\"{question_type}\" name=\"{var_name}\" onChange={{this.handleChange}} value={{this.state.{var_name}}}>{ques}</InputFieldGroup>\n"
 
-drop_question = "              <InputDropdownGroup options={{{arr_name}}}>{ques}</InputDropdownGroup>
-              <Dropdown options={{{arr_name}}}/>"
+drop_question = """              <InputDropdownGroup options={{{arr_name}}}>{ques}</InputDropdownGroup>
+              <Dropdown options={{{arr_name}}}/>\n"""
 
 
-with open('question_v2.json', 'r') as f:
+with open('question.json', 'r') as f:
     x = json.load(f)
 
 state_lst = []
+arr_lst = []
 
 for section, questions in x.items():
     # print(input_field_section.format(section))
@@ -108,6 +111,10 @@ for section, questions in x.items():
                 var_name=question_obj['var_name']))
             '''
             state_lst.append(question_obj['var_name'] + ': \'\',')
+            if question_obj['type'] == 'dropdown' or question_obj['type'] == 'checkbox':
+                answer_lst = "\", \"".join(question_obj['answer'])
+                arr_lst.append("const {} = [\"{}\"]".format((question_obj['var_name'] + '_arr'),
+                    answer_lst))
             # print(question_obj['question'])
             # print(question_obj['answer'])
             # print(question_obj['type'])
@@ -115,25 +122,49 @@ for section, questions in x.items():
     # print(input_field_section_end)
 state_lst[-1] = state_lst[-1][0:-1]
 state = ('\n'.join(state_lst))
+arr = ('\n'.join(arr_lst))
 
-print(constructor_top)
-print(state)
-print(constructor_bot)
-print(code)
-print(ret_top)
-for section, questions in x.items():
-    print(input_field_section.format(section))
-    for question_obj in questions:
-        if question_obj['var_name'] == 'dropdown':
-            arr_name = 'a'
-        if question_obj['var_name'] != 'hello':
-            print(text_question.format(question_type=question_obj['type'],
-                ques=question_obj['question'],
-                var_name=question_obj['var_name']))
-            state_lst.append(question_obj['var_name'] + ': \'\',')
-            # print(question_obj['question'])
-            # print(question_obj['answer'])
-            # print(question_obj['type'])
-            # print(question_obj['var_name'])
-    print(input_field_section_end)
-print(ret_bot)
+f = open('output.jsx', 'w')
+with open('output.jsx' ,'w') as f:
+    f.write(constructor_top)
+    f.write(state)
+    f.write(constructor_bot)
+    f.write(code)
+    f.write(ret_top_top)
+    f.write(arr)
+    f.write(ret_top_bot)
+    '''
+    print(constructor_top)
+    print(state)
+    print(constructor_bot)
+    print(code)
+    print(ret_top_top)
+    print(arr)
+    print(ret_top_bot)
+    '''
+    for section, questions in x.items():
+        # print(input_field_section.format(section))
+        f.write(input_field_section.format(section))
+        for question_obj in questions:
+            if question_obj['type'] == 'dropdown' or question_obj['type'] == 'checkbox':
+                arr_name = question_obj['var_name'] + '_arr'
+                # print(drop_question.format(arr_name=arr_name,
+                f.write(drop_question.format(arr_name=arr_name,
+                ques=question_obj['question']))
+            if question_obj['type'] == 'text':
+                '''
+                print(text_question.format(question_type=question_obj['type'],
+                    ques=question_obj['question'],
+                    var_name=question_obj['var_name']))
+                '''
+
+                f.write(text_question.format(question_type=question_obj['type'],
+                    ques=question_obj['question'],
+                    var_name=question_obj['var_name']))
+                state_lst.append(question_obj['var_name'] + ': \'\',')
+                # print(question_obj['question'])
+                # print(question_obj['answer'])
+                # print(question_obj['type'])
+                # print(question_obj['var_name'])
+        f.write(input_field_section_end)
+    f.write(ret_bot)

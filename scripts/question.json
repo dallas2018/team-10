@@ -804,7 +804,7 @@
         "Unsure"
       ],
       "type": "checkbox",
-      "var_name": "drug screening"
+      "var_name": "drug_screening"
     },
     {
       "question": "Are you interested in sharing your SER story after receiving SER services?",
