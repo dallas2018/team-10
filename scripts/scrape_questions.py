@@ -5,6 +5,7 @@ from urllib.request import Request, urlopen, build_opener
 
 base_url = 'https://www.tfaforms.com/429640'
 
+upper_dct = {}
 dct = {}
 temp_question = ''
 temp_choice = []
@@ -13,6 +14,7 @@ opener = build_opener()
 page = opener.open(base_url)
 soup = bf(page, 'lxml')
 for i in (soup.findAll('fieldset', {'class': 'section column'})):
+    title = i.select('legend')[0].text
     print("section title: ", i.select('legend')[0].text)
     print('--------------------------------------')
     # getting options
@@ -36,4 +38,20 @@ for i in (soup.findAll('fieldset', {'class': 'section column'})):
                 for x in options:
                     dct[temp_question].append(x.text)
                     print('choice: ', x.text)
-print(dct)
+    upper_dct[title] = dct
+
+type = 'dropdown'
+master_dct = {}
+for title, questions in upper_dct.items():
+    master_dct[title] = []
+    for question, answer in questions.items():
+        if not answer:
+            type = 'text'
+        else:
+            type = 'dropdown'
+        if 'Yes' in answer:
+            type = 'checkbox'
+        master_dct[title].append({'question': question, 'answer': answer,
+            'type': type}) 
+
+print(master_dct)
