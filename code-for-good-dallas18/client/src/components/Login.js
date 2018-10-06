@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {LoginForm} from 'react-stormpath';
 
 class Login extends Component {
     constructor(props){
@@ -15,15 +16,18 @@ class Login extends Component {
                 <div>
                     <p>what</p>
                 </div>
+                <div>
+                    <LoginForm/>
+                </div>
                 <form>
                     <label>
                         Name:
-                        <input type="text" name="name"/>
+                        <input type="text" value={this.state.username} name="name"/>
                     </label>
                     <br></br>
                     <label>
                         Password:
-                        <input type="text" name="password"/>
+                        <input type="password" name="password"/>
                     </label>
                     <br></br>
                     <input type="submit"></input>
