@@ -33,17 +33,20 @@ class Landing extends Component {
           <div className={styles.landingWrapper}>
             <h2 className={styles.title}>Application Disclaimer</h2>
             <div>By completing the application:</div>
+          <br />
             <div>I certify that the information provided in this application
               and all related documents is a true and accurate representation of
               my experience and abilities. If the information I have provided is
               found to be false, my application may be cancelled, my training
               terminated, or my employment may be terminated.</div>
+            <br />
             <div>I agree to allow SER – Jobs for Progress and any business
                partners to verify the information I’ve provided, including
                previous employment, education, references, and background.
                I will not hold the SER – Jobs for Progress or its project
                 partners liable for information found during this verification
                  or making decisions accordingly.</div>
+               <br />
             </div>
         </div>
       </div>
