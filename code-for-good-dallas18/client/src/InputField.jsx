@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './InputField.module.css';
 
 const InputField = ({
-  value, 
+  value,
   type,
   name,
   required
