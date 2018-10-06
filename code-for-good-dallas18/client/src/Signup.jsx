@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fire from './fire';
+import fire from './fire.js';
 import styles from './Signup.module.css';
 
 class Signup extends Component {
