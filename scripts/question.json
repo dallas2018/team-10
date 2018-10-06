@@ -637,20 +637,12 @@
   ],
   "Military Status": [
     {
-      "question": "Are you a veteran?",
-      "answer": [
-        "Please select...",
-        "Yes",
-        "No"
-      ],
-      "type": "checkbox",
-      "var_name": "veteran"
-    },
-    {
       "question": "Military Status",
       "answer": [
         "Please select...",
+        "Active Duty",
         "Reserve",
+        "Veteran",
         "Honorable Discharge",
         "Dishonorable Discharge",
         "General Discharge"
@@ -668,13 +660,14 @@
       "question": "Which branch did you serve in?",
       "answer": [
         "Please select...",
-        "Army",
-        "Army National Guard",
-        "Marine Corps",
-        "Navy",
         "Air Force",
         "Air Force National Guard",
-        "Coast Guard"
+        "Army",
+        "Army National Guard",
+        "Coast Guard",
+        "Marine Corps",
+        "Navy"
+
       ],
       "type": "dropdown",
       "var_name": "branch_served"
@@ -682,64 +675,61 @@
   ],
   "Client Needs": [
     {
-      "question": "Please rate the three services that you are most interested in below:",
-      "answer": [],
-      "type": "text",
-      "var_name": "rate_below"
-    },
-    {
-      "question": "Highest Priority",
+      "question": "Which service is your highest priority?",
       "answer": [
         "Please select...",
-        "Job Placement",
         "Career Development",
-        "Training",
         "Education",
+        "Financial Education",
         "Income Support",
-        "Financial Education"
+        "Job Placement",
+        "Training"
       ],
       "type": "dropdown",
       "var_name": "high_priority"
     },
     {
-      "question": "Medium Priority",
+      "question": "Which is your second-highest priority?",
       "answer": [
         "Please select...",
-        "Job Placement",
         "Career Development",
-        "Training",
         "Education",
+        "Financial Education",
         "Income Support",
-        "Financial Education"
+        "Job Placement",
+        "Training"
+
       ],
       "type": "dropdown",
       "var_name": "medium_priority"
     },
     {
-      "question": "Lowest Priority",
+      "question": "Which is your third-highest priority?",
       "answer": [
         "Please select...",
-        "Job Placement",
         "Career Development",
-        "Training",
         "Education",
+        "Financial Education",
         "Income Support",
-        "Financial Education"
+        "Job Placement",
+        "Training"
       ],
       "type": "dropdown",
       "var_name": "low_priority"
     },
     {
-      "question": "What is your availability for these activities?",
+      "question": "What is your availability?",
       "answer": [
         "Full time (30+ hours per week)",
         "Part time (20 hours or less per week)",
-        "Days (8am to 5pm)",
+        "Mornings (8am to 12pm)",
+        "Afternoons (1pm - 5pm)",
         "Evenings (6pm to 10pm)",
+        "Days (8am to 5pm)",
         "Weekdays (Monday-Friday)",
         "Weekends (Saturday & Sunday)"
       ],
-      "type": "dropdown",
+      "type": "checkbox",
       "var_name": "availability"
     },
     {
@@ -748,7 +738,8 @@
         "Please select...",
         "2 weeks",
         "6-10 weeks",
-        "Up to one year"
+        "Up to one year",
+        "Indefinitely"
       ],
       "type": "dropdown",
       "var_name": "time_invest"
@@ -767,7 +758,7 @@
         "Need of child care",
         "Other"
       ],
-      "type": "dropdown",
+      "type": "checkbox",
       "var_name": "block_get_job"
     },
     {
@@ -784,24 +775,24 @@
         "Child care",
         "Other"
       ],
-      "type": "dropdown",
+      "type": "checkbox",
       "var_name": "prevent_maintain_job"
     },
     {
-      "question": "What is your wage expectation?",
+      "question": "What is your wage expectation? (N/A if none)",
       "answer": [],
       "type": "text",
       "var_name": "expected_wage"
     },
     {
-      "question": "Are you able to take and pass a drug screening within 24 hours?",
+      "question": "Are you able to take and pass a drug screening within 24 hours of submitting your application?",
       "answer": [
         "Please select...",
         "Yes",
         "No",
         "Unsure"
       ],
-      "type": "checkbox",
+      "type": "dropdown",
       "var_name": "drug_screening"
     },
     {
@@ -812,7 +803,7 @@
         "No",
         "Not Sure"
       ],
-      "type": "checkbox",
+      "type": "dropdown",
       "var_name": "share_SER"
     },
     {
