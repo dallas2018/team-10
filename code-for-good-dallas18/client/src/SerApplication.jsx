@@ -3,10 +3,9 @@ import InputField from './InputField.jsx';
 import fire from './fire';
 import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
-import SerApplication from './SerApplication.jsx';
-import './App.css';
+import styles from './SerApplication.module.css';
 
-class App extends Component {
+class SerApplication extends Component {
   state = {
     response: ''
   };
@@ -29,13 +28,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">SER Houston - Online Application</h1>
-        </header>
-        <SerApplication />
+        <InputSection type="text" required="false">Hello</InputSection>
+        
+
+        <p className="App-intro">{this.state.response}</p>
       </div>
     );
   }
 }
 
-export default App;
+export default SerApplication;
