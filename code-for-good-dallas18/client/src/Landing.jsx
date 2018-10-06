@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fire from './fire';
+import { BrowserRouter, Link } from 'react-router-dom';
 import styles from './Landing.module.css';
 import wallpaper from './assets/wallpaper.jpg';
 
@@ -47,7 +48,9 @@ class Landing extends Component {
                 partners liable for information found during this verification
                  or making decisions accordingly.</div>
                <br />
-             <button className={styles.submitButton}
+               <Link to="/app">
+                 <button className={styles.submitButton}>I agree, proceed</button>
+               </Link>
             </div>
         </div>
       </div>

@@ -37,9 +37,9 @@
 }
 
 .submitButton {
-  border: solid 3px #fff;
+  border: solid 3px #000;
   border-radius: 15px;
-  padding: 2vh 8vw;
+  padding: 2vh 4vw;
   font-size: 1.5rem;
   text-align: center;
   width: auto;
