@@ -693,7 +693,7 @@
         "Above Average"
       ],
       "type": "dropdown",
-      "var_name": "computer_skills"
+      "var_name": "literacy"
     },
     {
       "question": "Please list any certificates you have earned, or any relevant training experience:",
