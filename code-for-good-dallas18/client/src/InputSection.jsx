@@ -9,7 +9,9 @@ const InputSection = ({
 }) => (
     <div className={styles.inputSection}>
       <span className={styles.inputSectionHeader}>{name}</span>
-      {children}
+      <div className={styles.questionsSection}>
+        {children}
+      </div>
     </div>
 );
 

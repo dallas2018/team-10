@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import InputField from './InputField.jsx';
 import InputFieldGroup from './InputFieldGroup.jsx';
 import InputSection from './InputSection.jsx';
-import DemographicInformation from './question-groups/DemographicInformation';
 import styles from './SerApplication.module.css';
 import firebase from './fire.js';
 
@@ -58,7 +57,6 @@ class SerApplication extends Component {
             </InputSection>
             <button>Submit</button>
           </form>
-        <p className="App-intro">{this.state.response}</p>
       </div>
     );
   }
