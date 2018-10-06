@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #008AB4;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -11,4 +11,23 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-subtitle {
+  color: #95C13D;
+  font-style: italic;
+}
+
+.App-tile-w {
+  min-height: 10vh;
+  height: auto;
+  position: relative;
+  background-color: white;
+}
+
+.App-tile-b {
+  min-height: 10vh;
+  height: auto;
+  position: relative;
+  background-color: #008AB4;
 }

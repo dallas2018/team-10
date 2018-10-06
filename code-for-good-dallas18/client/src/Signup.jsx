@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fire from './fire';
+import fire from './fire.js';
 import styles from './Signup.module.css';
 
 class Signup extends Component {
@@ -27,9 +27,9 @@ class Signup extends Component {
       <div className="login">
         <h1 className={styles.signupHeader}>Sign Up</h1>
         <span>Email</span>
-        <input type="email" name="Email" value=""/>
+        <input type="email" name="Email" defaultValue=""/><br/>
         <span>Password</span>
-        <input type="password" name="Password" value=""/>
+        <input type="password" name="Password" defaultValue=""/><br/>
         <button type="submit">Sign Up</button>
       </div>
     );
